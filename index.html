@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>360安全浏览器</title>
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+  <div id="fullpage">
+    <div class="page first" >
+      <div class="logo">
+        <img src="./image/logo.png" alt="">
+      </div>
+      <div class="text">
+        <img src="./image/text_1.png" alt="">
+        <img src="./image/text_2.png" alt="">
+        <img src="./image/text_3.png" alt="">
+        <img src="./image/text_4.png" alt="">
+        <img src="./image/text_5.png" alt="">
+        <img src="./image/text_6.png" alt="">
+        <img src="./image/text_7.png" alt="">
+        <img src="./image/text_8.png" alt="">
+        
+      </div>
+      <div class="info">
+        <img src="./image/info_1.png" alt="" srcset="">
+      </div>
+    </div>
+    <div class="page second" >
+      <div class="shield">
+        <img src="./image/shield_1.png" alt="">
+        <img src="./image/shield_2.png" alt="">
+        <img src="./image/shield_3.png" alt="">
+        <img src="./image/shield_4.png" alt="">
+        <img src="./image/shield_5.png" alt="">
+        <img src="./image/shield_6.png" alt="">
+        <img src="./image/shield_7.png" alt="">
+        <img src="./image/shield_8.png" alt="">
+        <img src="./image/shield_9.png" alt="">
+      </div>
+      <div>
+        <img src="./image/info_2.png" alt="">
+      </div>
+    </div>
+    <div class="page third" >
+      <div class="info">
+        <img src="./image/info_3.png" alt="">
+      </div>
+      <div class="circle">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+      </div>
+      <div class="rocket">
+        <img src="./image/rocket.png" alt="">
+      </div>
+    </div>
+    <div class="page four" >
+      <div class="search">
+        <div class="key">
+          <img src="./image/search.png" alt="">
+        </div>
+        <div class="keyword">
+          
+        </div>
+        <div class="wrap"><img src="./image/result.png" alt=""></div>
+      </div>
+      <div class="info"><img src="./image/info_4.png" alt=""></div>
+    </div>
+    <div class="page five" >
+      <div class="info">
+        <img src="./image/info_5.png" alt="">
+      </div>
+      <div class="browser">
+        <div class="nav">
+          <img src="./image/toolbar.png" alt="">
+        </div>
+        <div class="tool_bar_border"></div>
+
+      </div>
+      <div class="browser_border_top"></div>
+      <div class="browser_border_left"></div>
+      <div class="browser_border_right"></div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/jquery.fullPage.min.js"></script>
+  <script>
+    
+    
+	$('#fullpage').fullpage({
+    sectionSelector: '.page',
+    sectionsColor : [
+      '#0DA5D6',
+			'#2AB561',
+			'#DE8910',
+			'#16BA9D',
+			'#0DA5D6'
+    ],
+    afterLoad : (a, key , c) => {
+      $('.page').removeClass('current');
+      setTimeout(() => {
+        $('.page').eq(key - 1).addClass('current');
+      }, 100);
+    }
+  });
+  
+  function getRandom(max, min) { //友好的随机序列
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+// const shield = document.querySelectorAll('[src*=shield]');//获取元素
+    // for(let i = 0; i < shield.length; i++) {  //遍历dom元素
+    //   shield[i].style.transform =`translate(${getRandom(800,400)}px, ${getRandom(50,0)}px) 
+    //   rotate(${getRandom(360,0)}deg)`; //添加随机位置和角度
+    // }
+    //   if(key == 2) {  
+    //     for(let i = 0; i < shield.length; i++) {
+    //   shield[i].style.transform =`translate(${0}px, ${0}px) rotate(${0}deg)`;
+      
+    // }
+    //   }
+  
+
+
+
+  
+  </script>
+  <script>
+  
+  
+  
+  </script>
+</body>
+</html>
